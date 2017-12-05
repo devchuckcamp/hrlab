@@ -1,0 +1,72 @@
+<div class="container-fluid text-center"
+fxLayout
+fxLayout.md="rows"
+fxLayoutAlign="center"
+fxLayoutGap="0px"
+fxLayoutGap.xs="0"
+>
+    <div class="container-fluid text-center pad-l-25"
+    fxLayout
+    fxLayout.md="rows"
+    fxLayoutAlign="left"
+    fxLayoutGap="5px"
+    fxLayoutGap.xs="0"
+    fxLayoutWrap="wrap"
+    >
+        <div class="work-item text-center mar-y-10" 
+            [fxFlex.xs]="xsDistribution" 
+            [fxFlex.sm]="smDistribution" 
+            [fxFlex.md]="mdDistribution" 
+            [fxFlex.lg]="lgDistribution" *ngFor="let work of works">
+            <div class="work-item-lists">                
+                <div>
+                    <a [routerLink]="[work.id]"  >
+                        {{ work.name }}
+                    </a>
+                </div>
+                <div>
+                    <label for="description">
+                        {{ work.description }}
+                    </label>
+                </div>
+                <div>
+                    <label for="visit">
+                        <a href="{{ work.url }}" target="_blank">
+                            Visit Site
+                        </a>
+                    </label>
+                </div>
+            </div>
+            
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header flex="50%">
+                        <mat-panel-title class="w-125">
+                            <h5 class="w-125">
+                                Achievements
+                            </h5>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            <!-- <mat-icon class="">
+                                                        stars
+                                                    </mat-icon> -->
+                            <i class="fa fa-trophy fa-2x fa-1-8">
+                
+                            </i>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                
+                    <p>
+                        Bachelor Degree in Information Technology University of St. LaSalle - Bacolod 2014
+                    </p>
+                    <p>
+                        Co-Founder -
+                        <a href="http://www.ohabart.com" target="_blank"> Ohabart 2017</a>
+                    </p>
+                
+                
+                </mat-expansion-panel>
+            
+        </div>
+
+    </div>
+</div>

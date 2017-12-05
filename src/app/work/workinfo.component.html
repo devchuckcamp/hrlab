@@ -1,0 +1,46 @@
+<div class="container-fluid text-center pad-l-25"
+fxLayout
+fxLayout.md="rows"
+fxLayoutAlign="left"
+fxLayoutGap="5px"
+fxLayoutGap.xs="0"
+fxLayoutWrap="wrap"
+>   <a  [routerLink]="['/work']">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+    </a>    
+</div>
+
+<div class="container-fluid text-center"
+fxLayout
+fxLayout.md="rows"
+fxLayoutAlign="center"
+fxLayoutGap="0px"
+fxLayoutGap.xs="0"
+>
+    <div class="container-fluid text-center pad-l-25"
+    fxLayout
+    fxLayout.md="rows"
+    fxLayoutAlign="center"
+    fxLayoutGap="0px"
+    fxLayoutGap.xs="0"
+    fxLayoutWrap="wrap"
+    >   
+        <div class="work-item-info text-center mar-y-10" 
+            [fxFlex.xs]="xsDistribution" 
+            [fxFlex.sm]="smDistribution" 
+            [fxFlex.md]="mdDistribution" 
+            [fxFlex.lg]="lgDistribution" 
+        >
+            <mat-spinner *ngIf="!work"></mat-spinner>
+            <div *ngIf="work" [fxFlex.lg]="100" >
+                <a href="{{work.url}}" target="_blank">
+                    {{ work.name }}
+                </a>
+            </div>
+            <label for="description">
+                {{ work.description }}
+            </label>
+        </div>
+        
+    </div>
+</div>
