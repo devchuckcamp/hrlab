@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.mat-toolbar.mat-primary{
+    background: #222222!important;
+}
+.mat-toolbar-row .mat-raised-button.mat-primary{
+    border-radius: 0;
+    margin-right: -6px;
+}
+.nav-container{
+    margin: 0 auto;
+}
+.mat-toolbar-row .mat-raised-button.mat-primary.router-active{
+    background-color: brown!important;
+}
+
+
+/* CHUCKSTRAP OVERWRITE */
+@import '~chuckstrap/css/chuckstrap.min.css';
+
+.w-125{
+    min-width: 125px;
+    max-width: 125px;
+}
+.fa-1-8{
+    font-size: 1.8em;
+}
+.h-425{
+    min-height: 425px;
+    max-height: 425px;
+}
